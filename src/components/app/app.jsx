@@ -8,6 +8,12 @@ import './app.css'; //тк webpack
 
 
 function App() {
+    const data = [
+        {name: 'John Brown', salary: 1000},
+        {name: 'David Smith', salary: 2200},
+        {name: 'Michael Clark', salary: 3000},
+    ];
+
     return (
         <div className='app'>
             <AppInfo/>
@@ -17,7 +23,7 @@ function App() {
                 <AppFilter/>
             </div>
 
-            <EmployeesList/>
+            <EmployeesList data={data}/>
             <EmployeesAddForm/>
         </div>
     );
